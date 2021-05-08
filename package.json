@@ -1,0 +1,19 @@
+{
+  "name": "iulibrary-web",
+  "version": "1.0.0",
+  "description": "a web project of IU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhnguyen32/IULibrary-Web.git"
+  },
+  "author": "Nguyen Quoc Khanh, Nguyen Ngoc Mai Oanh, Tran Quoc Thinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khanhnguyen32/IULibrary-Web/issues"
+  },
+  "homepage": "https://github.com/khanhnguyen32/IULibrary-Web#readme"
+}
