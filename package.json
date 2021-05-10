@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/khanhnguyen32/IULibrary-Web/issues"
   },
-  "homepage": "https://github.com/khanhnguyen32/IULibrary-Web#readme"
+  "homepage": "https://github.com/khanhnguyen32/IULibrary-Web#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "nodemon": "^2.0.7"
+  }
 }
