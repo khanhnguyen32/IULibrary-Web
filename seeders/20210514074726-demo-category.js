@@ -7,8 +7,8 @@ module.exports = {
       { name: "History", summary: '', imagePath: 'img/home/hero-slide3.png'},
       { name: "Science & Math", summary: '', imagePath: 'img/home/hero-slide1.png'},
       { name: "Sport", summary: '', imagePath: 'img/home/hero-slide2.png'}
-    ];
-    
+  ];
+
     data.map(item => {
       item.createdAt = Sequelize.literal('NOW()');
       item.updatedAt = Sequelize.literal('NOW()');
@@ -16,11 +16,10 @@ module.exports = {
     });
 
     return queryInterface.bulkInsert('Categories', data, {});
-   
+
   },
 
   down: (queryInterface, Sequelize) => {
     return queryInterface.bulkDelete('Categories', null, {});
-    
   }
 };
