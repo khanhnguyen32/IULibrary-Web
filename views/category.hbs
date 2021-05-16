@@ -1,401 +1,321 @@
-{{> banner}}
+<script src="/vendors/nouislider/nouislider.min.js"></script>
+
+
 
 <!-- ================ category section start ================= -->
 <section class="section-margin--small mb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-5">
-                <div class="sidebar-categories">
-                    <div class="head">Browse Categories</div>
-                    <ul class="main-categories">
-                        <li class="common-filter">
-                            <form action="#">
-                                <ul>
-                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="men" name="brand"><label for="men">Men<span> (3600)</span></label></li>
-                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="women" name="brand"><label for="women">Women<span> (3600)</span></label></li>
-                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="accessories" name="brand"><label for="accessories">Accessories<span> (3600)</span></label></li>
-                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="footwear" name="brand"><label for="footwear">Footwear<span> (3600)</span></label></li>
-                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="bayItem" name="brand"><label for="bayItem">Bay item<span> (3600)</span></label></li>
-                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="electronics" name="brand"><label for="electronics">Electronics<span> (3600)</span></label></li>
-                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="food" name="brand"><label for="food">Food<span> (3600)</span></label></li>
-                                </ul>
-                            </form>
-                        </li>
-                    </ul>
-                </div>
-                <div class="sidebar-filter">
-                    <div class="top-filter-head">Product Filters</div>
-                    <div class="common-filter">
-                        <div class="head">Brands</div>
-                        <form action="#">
-                            <ul>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Apple<span>(29)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Asus<span>(29)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Gionee<span>(19)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Micromax<span>(19)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Samsung<span>(19)</span></label></li>
-                            </ul>
-                        </form>
-                    </div>
-                    <div class="common-filter">
-                        <div class="head">Color</div>
-                        <form action="#">
-                            <ul>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Black<span>(29)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">Black
-                      Leather<span>(29)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">Black
-                      with red<span>(19)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">Gold<span>(19)</span></label></li>
-                                <li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Spacegrey<span>(19)</span></label></li>
-                            </ul>
-                        </form>
-                    </div>
-                    <div class="common-filter">
-                        <div class="head">Price</div>
-                        <div class="price-range-area">
-                            <div id="price-range"></div>
-                            <div class="value-wrapper d-flex">
-                                <div class="price">Price:</div>
-                                <span>$</span>
-                                <div id="lower-value"></div>
-                                <div class="to">to</div>
-                                <span>$</span>
-                                <div id="upper-value"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-9 col-lg-8 col-md-7">
-                <!-- Start Filter Bar -->
-                <div class="filter-bar d-flex flex-wrap align-items-center">
-                    <div class="sorting">
-                        <select>
-                <option value="1">Default sorting</option>
-                <option value="1">Default sorting</option>
-                <option value="1">Default sorting</option>
-              </select>
-                    </div>
-                    <div class="sorting mr-auto">
-                        <select>
-                <option value="1">Show 12</option>
-                <option value="1">Show 12</option>
-                <option value="1">Show 12</option>
-              </select>
-                    </div>
-                    <div>
-                        <div class="input-group filter-bar-search">
-                            <input type="text" placeholder="Search">
-                            <div class="input-group-append">
-                                <button type="button"><i class="ti-search"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Filter Bar -->
-                <!-- Start Best Seller -->
-                <section class="lattest-product-area pb-40 category-list">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product1.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Accessories</p>
-                                    <h4 class="card-product__title"><a href="#">Quartz Belt Watch</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product2.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Beauty</p>
-                                    <h4 class="card-product__title"><a href="#">Women Freshwash</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product3.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Decor</p>
-                                    <h4 class="card-product__title"><a href="#">Room Flash Light</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product4.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Decor</p>
-                                    <h4 class="card-product__title"><a href="#">Room Flash Light</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product5.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Accessories</p>
-                                    <h4 class="card-product__title"><a href="#">Man Office Bag</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product6.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Kids Toy</p>
-                                    <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product7.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Accessories</p>
-                                    <h4 class="card-product__title"><a href="#">Blutooth Speaker</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product8.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Kids Toy</p>
-                                    <h4 class="card-product__title"><a href="#">Charging Car</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-4">
-                            <div class="card text-center card-product">
-                                <div class="card-product__img">
-                                    <img class="card-img" src="img/product/product1.png" alt="">
-                                    <ul class="card-product__imgOverlay">
-                                        <li><button><i class="ti-search"></i></button></li>
-                                        <li><button><i class="ti-shopping-cart"></i></button></li>
-                                        <li><button><i class="ti-heart"></i></button></li>
-                                    </ul>
-                                </div>
-                                <div class="card-body">
-                                    <p>Accessories</p>
-                                    <h4 class="card-product__title"><a href="#">Quartz Belt Watch</a></h4>
-                                    <p class="card-product__price">$150.00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- End Best Seller -->
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-4 col-md-5">
+        <div class="sidebar-categories">
+          <div class="head">Browse Categories</div>
+          <ul class="main-categories">
+            <li class="common-filter">
+              <form action="#">
+                <ul>
+                  {{#each categories}}
+                  <li class="filter-list"><input class="pixel-radio" type="radio" id="category{{id}}" name="category"
+                      onclick="selectParam('category',{{id}}, true)"><label for="category{{id}}">{{name}}<span>
+                      ({{Products.length}})</span></label>
+                  </li>
+                  {{/each}}
+                </ul>
+              </form>
+            </li>
+          </ul>
         </div>
+        <div class="sidebar-filter">
+          <div class="top-filter-head">Product Filters</div>
+          <div class="common-filter">
+            <div class="head">Brands</div>
+            <form action="#">
+              <ul>
+                {{#each brands}}
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="brand{{id}}" name="brand"
+                    onclick="selectParam('brand',{{id}})"><label for="brand{{id}}">{{name}}<span>
+                      ({{Products.length}})</span></label></li>
+                {{/each}}
+              </ul>
+            </form>
+          </div>
+          <div class="common-filter">
+            <div class="head">Color</div>
+            <form action="#">
+              <ul>
+                {{#each colors}}
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="color{{id}}" name="color"
+                    onclick="selectParam('color',{{id}})"><label for="color{{id}}">{{name}}<span>
+                      ({{ProductColors.length}})</span></label></li>
+                {{/each}}
+              </ul>
+            </form>
+          </div>
+          <div class="common-filter">
+            <div class="head">Price</div>
+            <div class="price-range-area">
+              <div id="price-range"></div>
+              <div class="value-wrapper d-flex">
+                <div class="price">Price:</div>
+                <span>VNĐ</span>
+                <div id="lower-value"></div>
+                <div class="to">to</div>
+                <span>VNĐ</span>
+                <div id="upper-value"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-9 col-lg-8 col-md-7">
+        <!-- Start Filter Bar -->
+        <div class="filter-bar d-flex flex-wrap align-items-center">
+          <div class="sorting">
+            <select id="sort" onchange="selectParam('sort', this.value)">
+              <option value="name">Default sorting by name</option>
+              <option value="price">Sorting by price low to high</option>
+              <option value="overallReview">Sorting by reviews from high to low</option>
+            </select>
+          </div>
+          <div class="sorting mr-auto">
+            <select id="limit" onchange="selectParam('limit', this.value)">
+              <option value="9">Show 9</option>
+              <option value="18">Show 18</option>
+              <option value="36">Show 36</option>
+            </select>
+          </div>
+          <div>
+            <div class="input-group filter-bar-search">
+              <form action="/products" method="GET">
+                <input type="text" name="search" placeholder="Search">
+                <div class="input-group-append">
+                  <button type="submit"><i class="ti-search"></i></button>
+                </div>
+            </form>
+            </div>
+          </div>
+        
+        <!-- End Filter Bar -->
+        <!-- Start Best Seller -->
+        <section class="lattest-product-area pb-40 category-list">
+          <div class="row">
+            {{#each products}}
+            <div class="col-md-6 col-lg-4">
+              {{>product}}
+            </div>
+            {{/each}}
+          </div>
+          <div class="row justify-content-center">
+          <nav aria-label="Page navigation example" id="pagination">
+            {{{createPagination pagination paginationClass="pagination"}}}
+          </nav>
+          </div>
+        </section>
+        <!-- End Best Seller -->
+      </div>
     </div>
+  </div>
 </section>
 <!-- ================ category section end ================= -->
 
 <!-- ================ top product area start ================= -->
-<section class="related-product-area">
-    <div class="container">
-        <div class="section-intro pb-60px">
-            <p>Popular Item in the market</p>
-            <h2>Top <span class="section-intro__style">Product</span></h2>
+{{!-- <section class="related-product-area">
+		<div class="container">
+			<div class="section-intro pb-60px">
+        <p>Popular Item in the market</p>
+        <h2>Top <span class="section-intro__style">Product</span></h2>
+      </div>
+			<div class="row mt-30">
+        <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-3.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row mt-30">
-            <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
-                <div class="single-search-product-wrapper">
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-3.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
-                <div class="single-search-product-wrapper">
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-4.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-5.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-6.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-4.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
             </div>
-
-            <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
-                <div class="single-search-product-wrapper">
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-7.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-8.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-9.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-5.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
             </div>
-
-            <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
-                <div class="single-search-product-wrapper">
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                    <div class="single-search-product d-flex">
-                        <a href="#"><img src="img/product/product-sm-3.png" alt=""></a>
-                        <div class="desc">
-                            <a href="#" class="title">Gray Coffee Cup</a>
-                            <div class="price">$170.00</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-6.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+
+        <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-7.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-8.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-9.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-xl-3 mb-4 mb-xl-0">
+          <div class="single-search-product-wrapper">
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-1.png" alt=""></a>
+              <div class="desc">
+                  <a href="#" class="title">Gray Coffee Cup</a>
+                  <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-2.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+            <div class="single-search-product d-flex">
+              <a href="#"><img src="img/product/product-sm-3.png" alt=""></a>
+              <div class="desc">
+                <a href="#" class="title">Gray Coffee Cup</a>
+                <div class="price">$170.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+	</section> --}}
 <!-- ================ top product area end ================= -->
 
 <!-- ================ Subscribe section start ================= -->
-<section class="subscribe-position">
-    <div class="container">
-        <div class="subscribe text-center">
-            <h3 class="subscribe__title">Get Update From Anywhere</h3>
-            <p>Bearing Void gathering light light his eavening unto dont afraid</p>
-            <div id="mc_embed_signup">
-                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe-form form-inline mt-5 pt-1">
-                    <div class="form-group ml-sm-auto">
-                        <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
-                        <div class="info"></div>
-                    </div>
-                    <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
-                    <div style="position: absolute; left: -5000px;">
-                        <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                    </div>
+{{!-- <section class="subscribe-position">
+  <div class="container">
+    <div class="subscribe text-center">
+      <h3 class="subscribe__title">Get Update From Anywhere</h3>
+      <p>Bearing Void gathering light light his eavening unto dont afraid</p>
+      <div id="mc_embed_signup">
+        <form target="_blank"
+          action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+          method="get" class="subscribe-form form-inline mt-5 pt-1">
+          <div class="form-group ml-sm-auto">
+            <input class="form-control mb-1" type="email" name="EMAIL" placeholder="Enter your email"
+              onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '">
+            <div class="info"></div>
+          </div>
+          <button class="button button-subscribe mr-auto mb-1" type="submit">Subscribe Now</button>
+          <div style="position: absolute; left: -5000px;">
+            <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+          </div>
 
-                </form>
-            </div>
+        </form>
+      </div>
 
-        </div>
     </div>
-</section>
+  </div>
+</section> --}}
 <!-- ================ Subscribe section end ================= -->
+<script>
+  let urlParams = new URLSearchParams(location.search);
+  let params = {
+    category: 0,
+    brand: 0,
+    color: 0,
+    min: 0,
+    max: 100000000,
+    limit: 9,
+    page: 1,
+    sort: 'name',
+    search: ''
+  };
+
+  for (let key in params) {
+    if (!urlParams.has(key)) {
+      urlParams.append(key, params[key]);
+    }
+  }
+
+
+  $(document).ready(() => {
+    let checkboxes = ['category', 'brand', 'color'];
+    for (let key of checkboxes) {
+      let control = $(`#${key}${urlParams.get(key)}`);
+      if (control) {
+        $(control).prop('checked', true);
+      }
+    }
+
+    $('#sort').val(urlParams.get('sort'));
+    $('#limit').val(urlParams.get('limit'));
+
+    $('#pagination li').addClass('page-item');
+    $('#pagination li a').addClass('page-link');
+    let savePage = urlParams.get('page');
+    $('#pagination li a').each((index, item) => {
+      let page = $(item).attr('href').split('=')[1];
+      urlParams.set('page', page);
+      let href = '/products?' + urlParams.toString();
+      $(item).attr('href', href);
+      
+    });
+    urlParams.set('page', savePage);
+  })
+
+
+  function selectParam(key, value, reset = false) {
+    if (reset) {
+      for (let key in params) {
+        urlParams.set(key, params[key]);
+      }
+    }
+
+    urlParams.set(key, value);
+    let url = `/products?${urlParams.toString()}`;
+    location.href = url;
+  }
+</script>

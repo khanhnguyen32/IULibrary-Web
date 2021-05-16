@@ -1,0 +1,282 @@
+
+<!-- ================ start banner area ================= -->	
+
+  <!-- ================ end banner area ================= -->
+
+{{#with product}}
+  <!--================Single Product Area =================-->
+	
+	<section class="product_image_area">
+		<div class="container">
+			<div class="row s_product_inner">
+				<div class="col-lg-6">
+					<div class="owl-carousel owl-theme s_Product_carousel">
+						<div class="single-prd-item">
+							<img class="img-fluid" src="{{imagepath}}" alt="">
+						</div>
+						<!-- <div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
+						</div> -->
+					</div>
+				</div>
+				<div class="col-lg-5 offset-lg-1">
+					<div class="s_product_text">
+						<h3>{{name}}</h3>
+						<h2>{{price}} VNĐ</h2>
+						<ul class="list">
+							<li><a class="active" href="#"><span>Category</span> : {{Category.name}}</a></li>
+							<li><a href="#"><span>Availability</span> :{{#if availability}} Còn hàng mua lẹ dùm{{else}} Sắp hết hàng rồi mua lẹ dùm{{/if}}</a></li>
+						</ul>
+						<p>{{sumary}}</p>
+						<div class="product_count">
+              <label for="qty">Quantity:</label>
+              <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+							 class="increase items-count" type="button"><i class="ti-angle-right"></i></button>
+							<input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty" readonly>
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+               class="reduced items-count" type="button"><i class="ti-angle-left"></i></button>
+							             
+						</div>
+						<a class="button primary-btn add-to-cart" data-id="{{id}}" href="">Add to Cart</a>  
+						<div class="card_area d-flex align-items-center">
+							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
+							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!--================End Single Product Area =================-->
+
+	<!--================Product Description Area =================-->
+	<section class="product_description_area">
+		<div class="container">
+			<ul class="nav nav-tabs" id="myTab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+					 aria-selected="false">Comments</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+					 aria-selected="false">Reviews</a>
+				</li>
+			</ul>
+			<div class="tab-content" id="myTabContent">
+				<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+					<pre>{{{description}}}</pre>
+				</div>
+				
+				<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="comment_list">
+								{{#each Comments}}
+								<div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+											<img src="{{User.avatarPath}}" alt="" width="50" height="50">
+										</div>
+										<div class="media-body">
+											<h4>{{User.fullname}}</h4>
+											<h5>{{createdAt}}</h5>
+											<a class="reply_btn" onclick="showReply({{id}}, '{{User.fullname}}')">Reply</a>
+										</div>
+									</div>
+									<p>{{message}}</p>
+								</div>
+								{{#each SubComments}}
+								<div class="review_item reply">
+									<div class="media">
+										<div class="d-flex">
+											<img src="{{User.avatarPath}}" alt="" width="50" height="50">
+										</div>
+										<div class="media-body">
+											<h4>{{User.fullname}}</h4>
+											<h5>{{createdAt}}</h5>
+											<a class="reply_btn" onclick="showReply({{../id}}, '{{User.fullname}}')">Reply</a>
+										</div>
+									</div>
+									<p>{{message}}</p>
+								</div>
+								{{/each}}
+								{{/each}}
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="review_box">
+								{{#if ../isLoggedIn}}
+								<h4>Post a comment</h4>
+								<form class="row form_contact form-review mt-3" action="/comments" method="post" id="contactForm" novalidate="novalidate">
+									<div class="col-md-12">
+										<div class="form-group form-inline">
+										<button type="button" class="close" aria-label="Close" id="closeButton" onclick="removeReply()"> 
+  											<span aria-hidden="true">&times; &nbsp;</span>
+										</button>
+										<label for="" id="reply"></label>
+										<input type="hidden" class="form-control" name="productId" id="productId" value="{{id}}">
+										<input type="hidden" name="parentCommentId" id="parentCommentId" value="">
+									</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<textarea class="form-control different-control w-100" name="message" cols="30" rows="10" placeholder="Enter Message"></textarea>
+										</div>
+									</div>
+									<div class="col-md-12 text-right">
+										<button type="submit" value="submit" class="button button--active button-review">Submit Now</button>
+									</div>
+								</form>
+								{{else}}
+								<h4>Please login to comment! <a href="/users/login?returnURL=/products/{{id}}">Click here to login</a></h4>
+								{{/if}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="row total_rate">
+								<div class="col-6">
+									<div class="box_total">
+										<h5>Overall</h5>
+										<h4>{{overallReview}}</h4>
+										<h6>{{reviewCount}} Reviews</h6>
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="rating_list">
+										<h3>Based on {{reviewCount}} Reviews</h3>
+										{{{createStarList stars}}}
+									</div>
+								</div>
+							</div>
+							<div class="review_list">
+								{{#each Reviews}}
+								<div class="review_item">
+									<div class="media">
+										<div class="d-flex">
+											<img src="{{User.avatarPath}}" alt="" width="50" height="50">
+										</div>
+										<div class="media-body">
+											<h4>{{User.fullname}}</h4>
+											{{{createStars rating}}}
+										</div>
+									</div>
+									<p>{{message}}</p>
+								</div>
+								{{/each}}
+								
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="review_box">
+								{{#if ../isLoggedIn}}
+								<h4>Add a Review</h4>
+								<p>Your Rating:</p>
+								<ul class="list" id="starList">
+									<li><a><i class="fa fa-star"></i></a></li>
+									<li><a><i class="fa fa-star"></i></a></li>
+									<li><a><i class="fa fa-star"></i></a></li>
+									<li><a><i class="fa fa-star"></i></a></li>
+									<li><a><i class="fa fa-star disabled"></i></a></li>
+								</ul>
+								<p id="starName">Outstanding</p>
+                <form action="/reviews" method="POST" class="form-contact form-review mt-3">
+                  <div class="form-group">
+					  	<input type="hidden" name="productId" value="{{id}}">
+						<input type="hidden" name="rating" id="rating" value="{{../userReview.rating}}">
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control different-control w-100" name="message" cols="30" rows="5" placeholder="Enter Message">{{../userReview.message}}</textarea>
+                  </div>
+                  <div class="form-group text-center text-md-right mt-3">
+                    <button type="submit" class="button button--active button-review">Submit Now</button>
+                  </div>
+                </form>
+				{{else}}
+								<h4>Please login to review! <a href="/users/login?returnURL=/products/{{id}}">Click here to login</a></h4>
+								{{/if}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!--================End Product Description Area =================-->
+{{/with}}
+		
+
+	<script>
+		function showReply(parentCommentId, fullname) {
+			$('#closeButton').show();
+			$('#reply').html('Reply ' + fullname);
+			$('#parentCommentId').val(parentCommentId);
+		}
+
+		function removeReply() {
+			$('#closeButton').hide();
+			$('#reply').html('');
+			$('#parentCommentId').val('');
+		}
+
+		function checkStars(){
+			let rating = getRating(this);
+			$('#rating').val(rating);
+			showStars(rating);
+		}
+		function highlightStars() {
+			let rating = getRating(this);
+			showStars(rating);
+		}
+
+		function resetStars() {
+			let rating = $('#rating').val();
+			showStars(rating);
+		}
+
+		function getRating(star){
+			let stars = $('#starList i');
+			let i = 0;
+			for (i=0; i<5; i++){
+				if($(stars[i]).get(0) == star){
+					return (i+1);
+					break;
+				}
+			}
+			return i;
+		}
+
+		function showStars(rating){
+			let stars = $('#starList i');
+			let i = 0;
+			for(i=0; i<5; i++){
+				$(stars[i]).removeClass('disabled');
+			}
+			for(i=rating; i<5; i++){
+				$(stars[i]).addClass('disabled');
+			}
+			let starNames = ['Please rating this product!','Worst','Bad','Ok', 'Good', 'Outstanding'];
+			$('#starName').html(starNames[rating]);
+		}
+
+		$(document).ready(() => {
+			$('#closeButton').hide();
+			$('#starList i').on('click', checkStars);
+			$('#starList i').on('mouseover', highlightStars);
+			$('#starList i').on('mouseout', resetStars);
+			resetStars();
+		
+		});
+
+	</script>
