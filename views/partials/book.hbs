@@ -1,15 +1,15 @@
 <div class="card text-center card-product">
     <div class="card-product__img">
-        <img class="card-img" src="{{imagepath}}" alt="">
+        <img class="card-img" src="{{imagePath}}" alt="">
         <ul class="card-product__imgOverlay">
-            <li><button onclick= "location.href= '/products/{{id}}' "><i class="ti-search"></i></button></li>
+            <li><button onclick= "location.href= '/books/{{id}}' "><i class="ti-search"></i></button></li>
             <li><button class="add-to-cart" data-id="{{id}}"><i class="ti-shopping-cart"></i></button></li>
             <li><button><i class="ti-heart"></i></button></li>
         </ul>
     </div>
     <div class="card-body">
-        <p>{{Category.name}} - {{Brand.name}}</p>
+        <p>{{Major.name}} - {{Publisher.name}}</p>
         <h4 class="card-product__title"><a href="/products/{{id}}">{{name}}</a></h4>
-        <p class="card-product__price">{{price}} VNĐ</p>
+        <p class="card-product__price">{{availableQuantity}} Book(s) available</p>
     </div>
 </div>

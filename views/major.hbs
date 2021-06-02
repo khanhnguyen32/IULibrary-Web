@@ -8,15 +8,15 @@
     <div class="row">
       <div class="col-xl-3 col-lg-4 col-md-5">
         <div class="sidebar-categories">
-          <div class="head">Browse Categories</div>
+          <div class="head">Browse Major</div>
           <ul class="main-categories">
             <li class="common-filter">
               <form action="#">
                 <ul>
-                  {{#each categories}}
-                  <li class="filter-list"><input class="pixel-radio" type="radio" id="category{{id}}" name="category"
-                      onclick="selectParam('category',{{id}}, true)"><label for="category{{id}}">{{name}}<span>
-                      ({{Products.length}})</span></label>
+                  {{#each majors}}
+                  <li class="filter-list"><input class="pixel-radio" type="radio" id="major{{id}}" name="major"
+                      onclick="selectParam('major',{{id}}, true)"><label for="major{{id}}">{{name}}<span>
+                      ({{Books.length}})</span></label>
                   </li>
                   {{/each}}
                 </ul>
@@ -25,27 +25,27 @@
           </ul>
         </div>
         <div class="sidebar-filter">
-          <div class="top-filter-head">Product Filters</div>
+          <div class="top-filter-head">Book Filters</div>
           <div class="common-filter">
-            <div class="head">Brands</div>
+            <div class="head">Publisher</div>
             <form action="#">
               <ul>
-                {{#each brands}}
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="brand{{id}}" name="brand"
-                    onclick="selectParam('brand',{{id}})"><label for="brand{{id}}">{{name}}<span>
-                      ({{Products.length}})</span></label></li>
+                {{#each publishers}}
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="publisher{{id}}" name="publisher"
+                    onclick="selectParam('publisher',{{id}})"><label for="publisher{{id}}">{{name}}<span>
+                      ({{Books.length}})</span></label></li>
                 {{/each}}
               </ul>
             </form>
           </div>
           <div class="common-filter">
-            <div class="head">Color</div>
+            <div class="head">Category</div>
             <form action="#">
               <ul>
-                {{#each colors}}
+                {{#each categories}}
                 <li class="filter-list"><input class="pixel-radio" type="radio" id="color{{id}}" name="color"
                     onclick="selectParam('color',{{id}})"><label for="color{{id}}">{{name}}<span>
-                      ({{ProductColors.length}})</span></label></li>
+                      ({{Categories.length}})</span></label></li>
                 {{/each}}
               </ul>
             </form>
@@ -98,9 +98,9 @@
         <!-- Start Best Seller -->
         <section class="lattest-product-area pb-40 category-list">
           <div class="row">
-            {{#each products}}
+            {{#each books}}
             <div class="col-md-6 col-lg-4">
-              {{>product}}
+              {{>book}}
             </div>
             {{/each}}
           </div>
@@ -282,7 +282,7 @@
 
 
   $(document).ready(() => {
-    let checkboxes = ['category', 'brand', 'color'];
+    let checkboxes = ['major', 'publisher', 'category'];
     for (let key of checkboxes) {
       let control = $(`#${key}${urlParams.get(key)}`);
       if (control) {
@@ -299,7 +299,7 @@
     $('#pagination li a').each((index, item) => {
       let page = $(item).attr('href').split('=')[1];
       urlParams.set('page', page);
-      let href = '/products?' + urlParams.toString();
+      let href = '/book?' + urlParams.toString();
       $(item).attr('href', href);
       
     });
@@ -315,7 +315,7 @@
     }
 
     urlParams.set(key, value);
-    let url = `/products?${urlParams.toString()}`;
+    let url = `/book?${urlParams.toString()}`;
     location.href = url;
   }
 </script>

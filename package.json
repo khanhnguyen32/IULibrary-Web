@@ -18,8 +18,10 @@
     },
     "homepage": "https://github.com/khanhnguyen32/IULibrary-Web#readme",
     "dependencies": {
+        "@handlebars/allow-prototype-access": "^1.0.5",
         "express": "^4.17.1",
         "express-handlebars": "^5.3.2",
+        "express-handlebars-paginate": "^1.0.3",
         "pg": "^8.6.0",
         "pg-hstore": "^2.3.3",
         "sequelize": "^6.6.2",
