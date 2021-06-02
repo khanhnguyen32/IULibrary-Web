@@ -13,7 +13,7 @@ controller.getTrendingProducts = () => {
                 ],
                 limit: 8,
                 include: [{ model: models.Major }, { model: models.Publisher }],
-                attributes: ['id', 'name', 'imagepath', 'availableQuantity']
+                attributes: ['id', 'name', 'imagePath', 'availableQuantity']
             })
             .then(data => resolve(data))
             .catch(error => reject(new Error(error)));
