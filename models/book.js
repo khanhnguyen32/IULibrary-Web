@@ -3,6 +3,7 @@ module.exports = (sequelize, DataTypes) => {
     const Book = sequelize.define('Book', {
         address: DataTypes.STRING,
         name: DataTypes.STRING,
+        author: DataTypes.STRING,
         imagePath: DataTypes.TEXT,
         thumbnailPath: DataTypes.TEXT,
         availableQuantity: DataTypes.INTEGER,
