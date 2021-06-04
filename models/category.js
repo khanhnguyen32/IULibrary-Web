@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
 
     Category.associate = function(models) {
-        Category.belongsTo(models.Book, { foreignKey: 'bookId' });
+        Category.hasMany(models.Book, { foreignKey: 'categoryId' });
 
     };
     return Category;

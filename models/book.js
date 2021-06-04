@@ -14,13 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
 
     Book.associate = function(models) {
-
         Book.belongsTo(models.Major, { foreignKey: 'majorId' });
         Book.belongsTo(models.Publisher, { foreignKey: 'publisherId' });
-        Book.hasMany(models.Category, { foreignKey: 'bookId' });
+        Book.belongsTo(models.Category, { foreignKey: 'categoryId' });
         Book.hasMany(models.Comment, { foreignKey: 'bookId' });
         Book.hasMany(models.Review, { foreignKey: 'bookId' });
-
     };
     return Book;
 };

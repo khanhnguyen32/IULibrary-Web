@@ -43,8 +43,8 @@
             <form action="#">
               <ul>
                 {{#each categories}}
-                <li class="filter-list"><input class="pixel-radio" type="radio" id="color{{id}}" name="color"
-                    onclick="selectParam('color',{{id}})"><label for="color{{id}}">{{name}}<span>
+                <li class="filter-list"><input class="pixel-radio" type="radio" id="category{{id}}" name="category"
+                    onclick="selectParam('category',{{id}})"><label for="category{{id}}">{{name}}<span>
                       ({{Categories.length}})</span></label></li>
                 {{/each}}
               </ul>
