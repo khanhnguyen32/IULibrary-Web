@@ -174,7 +174,7 @@ a {
 
 .header_area .navbar .nav .nav-item:hover .nav-link,
 .header_area .navbar .nav .nav-item.active .nav-link {
-    color: #a1294c
+    color: #384aeb
 }
 
 .header_area .navbar .nav .nav-item.submenu {
@@ -245,7 +245,7 @@ a {
 }
 
 .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link {
-    background: #a1294c;
+    background: #384aeb;
     color: #fff
 }
 
@@ -436,7 +436,7 @@ a {
 .nav-shop li button .nav-shop__circle {
     font-size: 9px;
     display: inline-block;
-    background: #a1294c;
+    background: #384aeb;
     color: #fff;
     padding: 0px 5px;
     border-radius: 50%;
@@ -499,7 +499,7 @@ a {
         display: block;
         width: 25px;
         height: 3px;
-        background: #a1294c;
+        background: #384aeb;
         margin: auto;
         margin-bottom: 4px;
         transition: all 400ms linear;
@@ -701,7 +701,7 @@ a {
 }
 
 .section-intro__style {
-    border-bottom: 2px solid #a1294c;
+    border-bottom: 2px solid #384aeb;
     padding-bottom: 8px
 }
 
@@ -816,7 +816,7 @@ a {
 .hero-carousel__slideOverlay {
     position: absolute;
     bottom: 50px;
-    background: #a1294c;
+    background: #384aeb;
     padding: 23px 90px 23px 25px;
     transform: translateY(50px);
     opacity: 0;
@@ -880,7 +880,7 @@ a {
     border: 0;
     border-radius: 0;
     padding: 7px 12px;
-    background: #d67b95
+    background: #8894ff
 }
 
 .card-product__imgOverlay li button i,
@@ -891,7 +891,7 @@ a {
 }
 
 .card-product__imgOverlay li button:hover {
-    background: #a1294c
+    background: #384aeb
 }
 
 .card-product__imgOverlay li:not(:last-child) {
@@ -914,7 +914,7 @@ a {
 }
 
 .card-product:hover .card-product__title a {
-    color: #a1294c
+    color: #384aeb
 }
 
 .offer {
@@ -971,13 +971,13 @@ a {
 #bestSellerCarousel .owl-next i,
 #bestSellerCarousel .owl-next span {
     font-size: 15px;
-    color: #a1294c;
+    color: #384aeb;
     line-height: 40px
 }
 
 #bestSellerCarousel .owl-prev:hover,
 #bestSellerCarousel .owl-next:hover {
-    background: #a1294c
+    background: #384aeb
 }
 
 #bestSellerCarousel .owl-prev:hover i,
@@ -1068,11 +1068,11 @@ a {
 }
 
 .card-blog:hover .card-blog__title a {
-    color: #a1294c
+    color: #384aeb
 }
 
 .card-blog:hover .card-blog__link {
-    color: #a1294c
+    color: #384aeb
 }
 
 .card-blog:hover .card-blog__link i,
@@ -1115,7 +1115,7 @@ a {
     position: absolute;
     top: 50px;
     left: 10px;
-    color: #a1294c
+    color: #384aeb
 }
 
 .subscribe-form .form-control {
@@ -1197,7 +1197,7 @@ a {
 }
 
 .button-blog:hover {
-    background: #a1294c !important;
+    background: #384aeb !important;
     color: #fff !important
 }
 
@@ -1254,12 +1254,12 @@ a {
 }
 
 .button--active {
-    background: #a1294c;
+    background: #384aeb;
     color: #fff
 }
 
 .button-contactForm {
-    border: 1px solid #a1294c !important;
+    border: 1px solid #384aeb !important;
     border-radius: 0;
     padding: 11px 26px
 }
@@ -1270,7 +1270,7 @@ a {
 }
 
 .button:hover {
-    border-color: #a1294c;
+    border-color: #384aeb;
     background: transparent;
     color: #222
 }
@@ -1281,11 +1281,11 @@ a {
     border-radius: 0;
     padding: 9px 15px;
     text-transform: uppercase;
-    background: #a1294c
+    background: #c5322d
 }
 
 .button-register:hover {
-    background: #a1294c;
+    background: #c5322d;
     opacity: .7;
     color: #fff
 }
@@ -1410,7 +1410,7 @@ a {
 }
 
 .l_blog_item .l_blog_text h4:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .l_blog_item .l_blog_text p {
@@ -1436,7 +1436,7 @@ a {
 }
 
 .causes_slider .owl-dots .owl-dot.active {
-    background: #a1294c
+    background: #384aeb
 }
 
 .causes_item {
@@ -1459,7 +1459,7 @@ a {
 .causes_item .causes_img .c_parcent span {
     width: 70%;
     height: 3px;
-    background: #a1294c;
+    background: #384aeb;
     position: absolute;
     left: 0px;
     bottom: 0px
@@ -1470,7 +1470,7 @@ a {
     position: absolute;
     right: -10px;
     bottom: 0px;
-    background: #a1294c;
+    background: #384aeb;
     color: #fff;
     padding: 0px 5px
 }
@@ -1488,7 +1488,7 @@ a {
 }
 
 .causes_item .causes_text h4:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .causes_item .causes_text p {
@@ -1500,11 +1500,11 @@ a {
 
 .causes_item .causes_bottom a {
     width: 50%;
-    border: 1px solid #a1294c;
+    border: 1px solid #384aeb;
     text-align: center;
     float: left;
     line-height: 50px;
-    background: #a1294c;
+    background: #384aeb;
     color: #fff;
     font-size: 14px;
     font-weight: 500
@@ -1565,7 +1565,7 @@ a {
 }
 
 .tags .tag_btn:before {
-    background: #a1294c
+    background: #384aeb
 }
 
 .tags .tag_btn+.tag_btn {
@@ -1639,7 +1639,7 @@ a {
 }
 
 .categories_post:hover .categories_details {
-    background: #a1294c
+    background: rgba(56, 74, 235, 0.85)
 }
 
 .blog_item {
@@ -1681,7 +1681,7 @@ a {
 }
 
 .blog_info .blog_meta li a:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .blog_post img {
@@ -1701,7 +1701,7 @@ a {
 }
 
 .blog_details h2:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .blog_details p {
@@ -1727,7 +1727,7 @@ a {
 .blog_right_sidebar .widget_title {
     font-size: 18px;
     line-height: 25px;
-    background: #a1294c;
+    background: #384aeb;
     text-align: center;
     color: #fff;
     padding: 8px 0px;
@@ -1744,7 +1744,7 @@ a {
     padding-left: 20px;
     border-radius: 45px;
     z-index: 0;
-    background: #a1294c
+    background: #384aeb
 }
 
 .blog_right_sidebar .search_widget .input-group .form-control.placeholder {
@@ -1812,7 +1812,7 @@ a {
 }
 
 .blog_right_sidebar .author_widget .social_icon a:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .blog_right_sidebar .popular_post_widget .post_item .media-body {
@@ -1830,7 +1830,7 @@ a {
 }
 
 .blog_right_sidebar .popular_post_widget .post_item .media-body h3:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .blog_right_sidebar .popular_post_widget .post_item .media-body p {
@@ -1864,11 +1864,11 @@ a {
 }
 
 .blog_right_sidebar .post_category_widget .cat-list li:hover {
-    border-color: #a1294c
+    border-color: #384aeb
 }
 
 .blog_right_sidebar .post_category_widget .cat-list li:hover a {
-    color: #a1294c
+    color: #384aeb
 }
 
 .blog_right_sidebar .newsletter_widget {
@@ -1929,7 +1929,7 @@ a {
 }
 
 .blog_right_sidebar .newsletter_widget .bbtns {
-    background: #a1294c;
+    background: #384aeb;
     color: #fff;
     font-size: 12px;
     line-height: 38px;
@@ -1959,7 +1959,7 @@ a {
 }
 
 .blog_right_sidebar .tag_cloud_widget ul li a:hover {
-    background: #a1294c;
+    background: #384aeb;
     color: #fff
 }
 
@@ -1989,7 +1989,7 @@ a {
 }
 
 .blog-pagination .page-item.active .page-link {
-    background-color: #a1294c;
+    background-color: #384aeb;
     border-color: transparent;
     color: #fff
 }
@@ -2016,7 +2016,7 @@ a {
 .blog-pagination .page-link:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #a1294c;
+    background-color: #384aeb;
     border-color: #eee
 }
 
@@ -2249,7 +2249,7 @@ a {
 }
 
 .comments-area .btn-reply:hover {
-    background-color: #a1294c;
+    background-color: #384aeb;
     color: #fff;
     font-weight: 700
 }
@@ -2399,7 +2399,7 @@ a {
 }
 
 .contact-banner-btn {
-    border: 2px solid #a1294c;
+    border: 2px solid #384aeb;
     padding: 10px 45px
 }
 
@@ -2414,7 +2414,7 @@ a {
 
 .contact-info__icon i,
 .contact-info__icon span {
-    color: #a1294c;
+    color: #384aeb;
     font-size: 20px
 }
 
@@ -2531,7 +2531,7 @@ a {
 .sidebar-categories .head {
     font-family: 'Oswald', sans-serif;
     line-height: 50px;
-    background: #a1294c;
+    background: #384aeb;
     padding: 0 30px;
     font-size: 18px;
     font-weight: 400;
@@ -2556,7 +2556,7 @@ a {
 }
 
 .sidebar-categories .main-nav-list a:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .sidebar-categories .main-nav-list a .number {
@@ -2580,7 +2580,7 @@ a {
 .sidebar-filter .top-filter-head {
     font-family: 'Oswald', sans-serif;
     line-height: 50px;
-    background: #a1294c;
+    background: #384aeb;
     padding: 0 30px;
     font-size: 18px;
     font-weight: 400;
@@ -2707,14 +2707,14 @@ a {
 }
 
 .pixel-radio:checked {
-    border: 8px solid #a1294c
+    border: 8px solid #384aeb
 }
 
 .pixel-radio:checked::after {
     -webkit-animation: click-wave 0.65s;
     -moz-animation: click-wave 0.65s;
     animation: click-wave 0.65s;
-    background: #a1294c;
+    background: #384aeb;
     content: '';
     display: block;
     width: 15px;
@@ -2766,7 +2766,7 @@ a {
     top: -5px;
     border-radius: 50%;
     border: 0px;
-    background: #a1294c;
+    background: #384aeb;
     box-shadow: none;
     cursor: pointer;
     -webkit-transition: ease 0.1s;
@@ -2780,7 +2780,7 @@ a {
 }
 
 .price-range-area .noUi-horizontal .noUi-handle:hover {
-    border: 3px solid #a1294c;
+    border: 3px solid #384aeb;
     background: #fff
 }
 
@@ -2852,7 +2852,7 @@ a {
 }
 
 .single-search-product:hover .title {
-    color: #a1294c
+    color: #384aeb
 }
 
 .order-wrapper {
@@ -2905,7 +2905,7 @@ a {
 
 .billing-alert {
     font-size: 18px;
-    color: #a1294c;
+    color: #384aeb;
     margin-bottom: 30px
 }
 
@@ -3061,7 +3061,7 @@ a {
 }
 
 .check_title h2 a {
-    color: #a1294c;
+    color: #384aeb;
     text-decoration: underline
 }
 
@@ -3175,9 +3175,9 @@ a {
 }
 
 .tp_btn:hover {
-    background: #a1294c;
+    background: #384aeb;
     color: #fff;
-    border-color: #a1294c
+    border-color: #384aeb
 }
 
 .billing_details h3 {
@@ -3277,7 +3277,7 @@ a {
 }
 
 .billing_details .contact_form .form-group .creat_account a {
-    color: #a1294c
+    color: #384aeb
 }
 
 .order_box {
@@ -3388,8 +3388,8 @@ a {
 }
 
 .order_box .payment_item.active h4:before {
-    background: #a1294c;
-    border-color: #a1294c
+    background: #384aeb;
+    border-color: #384aeb
 }
 
 .order_box .creat_account {
@@ -3592,7 +3592,7 @@ a {
 
 .order_box .creat_account a {
     font-size: 12px;
-    color: #a1294c
+    color: #384aeb
 }
 
 .login_box_area .login_box_img {
@@ -4021,7 +4021,7 @@ a {
     height: 40px;
     line-height: 38px;
     text-transform: uppercase;
-    background: #a1294c;
+    background: #384aeb;
     padding: 0px 38px;
     margin-right: 5px;
     margin-left: 10px;
@@ -4077,7 +4077,7 @@ a {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #a1294c;
+    background: #384aeb;
     display: inline-block;
     position: absolute;
     right: 3px;
@@ -4154,7 +4154,7 @@ a {
     padding: 0px 44px;
     line-height: 38px;
     text-transform: capitalize;
-    background: #a1294c;
+    background: #384aeb;
     border-radius: 30px;
     color: #fff;
     font-weight: 500
@@ -4229,7 +4229,7 @@ a {
     font-family: "Roboto", sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #a1294c;
+    color: #384aeb;
     margin-bottom: 10px
 }
 
@@ -4425,8 +4425,8 @@ a {
 
 .product_description_area .nav.nav-tabs li a.active {
     color: #fff;
-    background: #a1294c;
-    border-color: #a1294c
+    background: #384aeb;
+    border-color: #384aeb
 }
 
 .product_description_area .tab-content {
@@ -4446,7 +4446,7 @@ a {
 .product_description_area .tab-content .total_rate .box_total h4 {
     font-size: 48px;
     font-weight: bold;
-    color: #a1294c
+    color: #384aeb
 }
 
 .product_description_area .tab-content .total_rate .box_total h5 {
@@ -4570,8 +4570,8 @@ a {
 }
 
 .review_item .media .media-body .reply_btn:hover {
-    background: #a1294c;
-    border-color: #a1294c;
+    background: #384aeb;
+    border-color: #384aeb;
     color: #fff
 }
 
@@ -4697,7 +4697,7 @@ a {
 }
 
 .tp_widgets .list li a:hover {
-    color: #a1294c
+    color: #384aeb
 }
 
 .tp_widgets .list li:last-child {
