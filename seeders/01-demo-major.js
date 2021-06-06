@@ -3,7 +3,7 @@
 module.exports = {
     up: (queryInterface, Sequelize) => {
         let data = [
-            { name: "Business", summary: "", imagePath: '/img/home/hero-slide1.png' },
+            { name: "Business", summary: "", imagePath: '/img/product/B1.jpg' },
             { name: "IT & Tech", summary: "", imagePath: '/img/home/hero-slide2.png' },
             { name: "Bio, Food & Chemistry", summary: "", imagePath: '/img/home/hero-slide3.png' },
             { name: "English Linguistics", summary: "", imagePath: '/img/home/hero-slide1.png' },
