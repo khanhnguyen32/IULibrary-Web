@@ -12,9 +12,9 @@
                       <thead>
                           <tr>
                               <th scope="col">Book</th>
-                              <th scope="col">Price</th>
+                              
                               <th scope="col">Quantity</th>
-                              <th scope="col">Total</th>
+                              
                           </tr>
                       </thead>
                       <tbody>
@@ -23,16 +23,14 @@
                               <td>
                                   <div class="media">
                                       <div class="d-flex">
-                                          <img src="{{item.thumbnailpath}}" alt="" height="85" width="55">
+                                          <img src="{{item.thumbnailPath}}" alt="" height="85" width="55">
                                       </div>
                                       <div class="media-body">
                                           <p>{{item.name}}</p>
                                       </div>
                                   </div>
                               </td>
-                              <td>
-                                  <h5>VNĐ {{item.price}}</h5>
-                              </td>
+                             
                               <td>
                                   <div class="product_count">
                                       <input type="text" name="qty" id="sst{{item.id}}" maxlength="12" value="{{quantity}}" title="Quantity:"
@@ -43,14 +41,12 @@
                                           class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
                                   </div>
                               </td>
-                              <td>
-                                  <h5 id="price{{item.id}}">{{price}}</h5>
-                              </td>
+                              
                           </tr>
                           {{/each}}
                           <tr class="bottom_button">
                               <td>
-                                  <a class="button bg-danger text-white" href="#" onclick="clearCart()">Clear Cart</a>
+                                  <a class="button bg-danger text-white" href="#" onclick="clearCart()">Clear List</a>
                               </td>
                               <td>
 
@@ -66,20 +62,7 @@
                                   </div> --}}
                               </td>
                           </tr>
-                          <tr>
-                              <td>
-
-                              </td>
-                              <td>
-
-                              </td>
-                              <td>
-                                  <h5>Subtotal</h5>
-                              </td>
-                              <td>
-                                  <h5 id="totalPrice"> {{totalPrice}}</h5>
-                              </td>
-                          </tr>
+                          
                           <tr class="shipping_area">
                               <td class="d-none d-md-block">
 
@@ -125,7 +108,7 @@
                               </td>
                               <td>
                                   <div class="checkout_btn_inner d-flex align-items-center">
-                                      <a class="gray_btn" href="/products">Continue Borrowing</a>
+                                      <a class="gray_btn" href="/book">Continue Borrowing</a>
                                       <a class="primary-btn ml-2" href="/confirmation" onclick="clearCart2()">Borrow</a>
                                   </div>
                               </td>

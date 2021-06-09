@@ -62,20 +62,21 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/:id', (req, res, next) => {
+
     let bookController = require('../controllers/bookController');
     bookController
         .getById(req.params.id)
         .then(book => {
             res.locals.book = book;
             let reviewController = require('../controllers/reviewController');
-            return reviewController.getUserReviewProduct(
-                req.session.user ? req.session.user.id : 0,
+            return reviewController.getStudentReviewBook(
+                req.session.student ? req.session.student.id : 0,
                 req.params.id
             );
         })
         .then(review => {
-            res.locals.userReview = review;
-            res.render('singleproduct');
+            res.locals.studentReview = review;
+            res.render('singlebook');
         })
         .catch(error => next(error));
 

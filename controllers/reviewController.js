@@ -8,57 +8,56 @@ controller.add = (review) => {
     return new Promise((resolve, reject) => {
         Review
             .findOne({
-                where:{
-                    userId: review.userId,
-                    productId: review.productId
+                where: {
+                    studentId: review.studentId,
+                    bookId: review.bookId
                 }
             })
-            .then(data =>{
-                if(data){
+            .then(data => {
+                if (data) {
                     return Review.update(review, {
                         where: {
-                            userId: review.userId,
-                            productId: review.productId
-                         }
-                     })
-                }
-                else{
+                            studentId: review.studentId,
+                            bookId: review.bookId
+                        }
+                    })
+                } else {
                     return Review.create(review);
                 }
             })
 
-            .then(() =>  { 
-                models.Product
-                    .findOne({
-                        where : { id: review.productId },
-                        include: [{ model: models.Review }]
-                    
+        .then(() => {
+            models.Book
+                .findOne({
+                    where: { id: review.bookId },
+                    include: [{ model: models.Review }]
+
+                })
+                .then(book => {
+                    let overallReview = 0;
+                    for (let i = 0; i < book.Reviews.length; i++) {
+                        overallReview += book.Reviews[i].rating;
+                    }
+                    overallReview = overallReview / book.Reviews.length;
+                    return models.Book.update({
+                        overallReview: overallReview,
+                        reviewCount: book.Reviews.length
+                    }, {
+                        where: { id: book.id }
                     })
-                    .then(product => {
-                        let overallReview = 0;
-                        for (let i=0; i<product.Reviews.length; i++){
-                            overallReview +=product.Reviews[i].rating;
-                        }
-                        overallReview = overallReview / product.Reviews.length;
-                        return models.Product.update({
-                            overallReview: overallReview,
-                            reviewCount: product.Reviews.length
-                        },{
-                            where: { id: product.id }
-                        })
-                    });  
-            })
-            
-            .then(data => resolve(data))
+                });
+        })
+
+        .then(data => resolve(data))
             .catch(error => reject(new Error(error)));
     });
 };
 
-controller.getUserReviewProduct = (userId, productId) => {
+controller.getStudentReviewBook = (studentId, bookId) => {
     return Review.findOne({
-        where:{
-            userId,
-            productId
+        where: {
+            studentId,
+            bookId
         }
     });
 };

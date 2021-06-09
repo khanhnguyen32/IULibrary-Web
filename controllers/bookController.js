@@ -24,7 +24,8 @@ controller.getAll = (query) => {
     return new Promise((resolve, reject) => {
         let options = {
             include: [{ model: models.Major },
-                { model: models.Publisher }
+                { model: models.Publisher },
+                { model: models.Category }
             ],
             attributes: ['id', 'name', 'imagePath', 'availableQuantity', 'majorId'],
             where: {
@@ -46,7 +47,7 @@ controller.getAll = (query) => {
             options.where.publisherId = query.publisher;
         }
         if (query.category > 0) {
-            options.where.publisherId = query.publisher;
+            options.where.categoryId = query.category;
         }
         if (query.limit > 0) {
             options.limit = query.limit;
@@ -59,9 +60,9 @@ controller.getAll = (query) => {
                         ['name', 'ASC']
                     ];
                     break;
-                case 'price':
+                case 'availableQuantity':
                     options.order = [
-                        ['price', 'ASC']
+                        ['availableQuantity', 'ASC']
                     ];
                     break;
                 case 'overallReview':
@@ -88,18 +89,21 @@ controller.getById = (id) => {
         Book
             .findOne({
                 where: { id: id },
-                include: [{ model: models.Major }],
+                include: [{ model: models.Major },
+                    { model: models.Publisher },
+                    { model: models.Category }
+                ]
             })
             .then(result => {
                 book = result;
                 return models.Comment.findAll({
                     where: { bookId: id, parentCommentId: null },
                     include: [
-                        { model: models.User },
+                        { model: models.Student },
                         {
                             model: models.Comment,
                             as: 'SubComments',
-                            include: [{ model: models.User }]
+                            include: [{ model: models.Student }]
                         }
                     ]
                 });
@@ -108,11 +112,11 @@ controller.getById = (id) => {
                 book.Comments = comments;
                 return models.Review.findAll({
                     where: { bookId: id },
-                    include: [{ model: models.User }]
+                    include: [{ model: models.Student }]
                 });
             })
             .then(reviews => {
-                product.Reviews = reviews;
+                book.Reviews = reviews;
 
                 let stars = [];
                 for (let i = 1; i <= 5; i++) {

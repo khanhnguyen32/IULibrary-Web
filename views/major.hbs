@@ -45,7 +45,7 @@
                 {{#each categories}}
                 <li class="filter-list"><input class="pixel-radio" type="radio" id="category{{id}}" name="category"
                     onclick="selectParam('category',{{id}})"><label for="category{{id}}">{{name}}<span>
-                      ({{Categories.length}})</span></label></li>
+                      ({{Books.length}})</span></label></li>
                 {{/each}}
               </ul>
             </form>
@@ -84,16 +84,18 @@
             </select>
           </div>
           <div>
+            <form action="/book" method="GET"></form>
             <div class="input-group filter-bar-search">
-              <form action="/products" method="GET">
+              
                 <input type="text" name="search" placeholder="Search">
                 <div class="input-group-append">
                   <button type="submit"><i class="ti-search"></i></button>
                 </div>
-            </form>
+            
             </div>
+            </form>
           </div>
-        
+        </div>
         <!-- End Filter Bar -->
         <!-- Start Best Seller -->
         <section class="lattest-product-area pb-40 category-list">

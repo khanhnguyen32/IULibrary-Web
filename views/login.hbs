@@ -9,21 +9,21 @@
 						<div class="hover">
 							<h4>New to our website?</h4>
 							<p>Borrow some books now</p>
-							<a class="button button-account" href="/users/register">Create an Account</a>
+							<a class="button button-account" href="/students/register">Create an Account</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner">
 						<h3>Log in to enter</h3>
-						<form class="row login_form" action="/users/login" id="contactForm" method="POST" >
+						<form class="row login_form" action="/students/login" id="contactForm" method="POST" >
 						{{#if message}}
 						<div class="col-md-12 form-group alert {{type}}">
 						<strong>{{message}}</strong>
 						</div> 
 						{{/if}}
 							<div class="col-md-12 form-group">
-								<input type="email" class="form-control" id="username" name="username" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+								<input type="text" class="form-control" id="studentID" name="studentID" placeholder="Student ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Student ID'">
 							</div>
 							<div class="col-md-12 form-group">
 								<input type="password" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">

@@ -3,7 +3,7 @@
 
   <!-- ================ end banner area ================= -->
 
-{{#with product}}
+{{#with book}}
   <!--================Single Product Area =================-->
 	
 	<section class="product_image_area">
@@ -12,7 +12,7 @@
 				<div class="col-lg-6">
 					<div class="owl-carousel owl-theme s_Product_carousel">
 						<div class="single-prd-item">
-							<img class="img-fluid" src="{{imagepath}}" alt="">
+							<img class="img-fluid" src="{{imagePath}}" alt="">
 						</div>
 						<!-- <div class="single-prd-item">
 							<img class="img-fluid" src="img/category/s-p1.jpg" alt="">
@@ -24,26 +24,27 @@
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="s_product_text">
-						<h3>{{name}}</h3>
-						<h2>{{price}} VNĐ</h2>
+						<h1>{{name}}</h1>
+						<h2>{{availableQuantity}} book(s) available</h2>
 						<ul class="list">
+							<li><a class="active" href="#"><span>Major</span> : {{Major.name}}</a></li>
+							<li><a class="active" href="#"><span>Publisher</span> : {{Publisher.name}}</a></li>
 							<li><a class="active" href="#"><span>Category</span> : {{Category.name}}</a></li>
-							<li><a href="#"><span>Availability</span> :{{#if availability}} Còn hàng mua lẹ dùm{{else}} Sắp hết hàng rồi mua lẹ dùm{{/if}}</a></li>
 						</ul>
-						<p>{{sumary}}</p>
+						<p>{{summary}}</p>
 						<div class="product_count">
-              <label for="qty">Quantity:</label>
-              <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+              				<label for="qty">Quantity:</label>
+              				<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 							 class="increase items-count" type="button"><i class="ti-angle-right"></i></button>
 							<input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty" readonly>
 							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-               class="reduced items-count" type="button"><i class="ti-angle-left"></i></button>
+               					class="reduced items-count" type="button"><i class="ti-angle-left"></i></button>
 							             
 						</div>
-						<a class="button primary-btn add-to-cart" data-id="{{id}}" href="">Add to Cart</a>  
+ 
 						<div class="card_area d-flex align-items-center">
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
-							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
+							<a class="button primary-btn add-to-cart" data-id="{{id}}" href="">Add to List</a> 
+							
 						</div>
 					</div>
 				</div>
@@ -82,12 +83,12 @@
 								<div class="review_item">
 									<div class="media">
 										<div class="d-flex">
-											<img src="{{User.avatarPath}}" alt="" width="50" height="50">
+											<img src="{{Student.avatarPath}}" alt="" width="50" height="50">
 										</div>
 										<div class="media-body">
-											<h4>{{User.fullname}}</h4>
+											<h4>{{Student.fullname}}</h4>
 											<h5>{{createdAt}}</h5>
-											<a class="reply_btn" onclick="showReply({{id}}, '{{User.fullname}}')">Reply</a>
+											<a class="reply_btn" onclick="showReply({{id}}, '{{Student.fullname}}')">Reply</a>
 										</div>
 									</div>
 									<p>{{message}}</p>
@@ -96,12 +97,12 @@
 								<div class="review_item reply">
 									<div class="media">
 										<div class="d-flex">
-											<img src="{{User.avatarPath}}" alt="" width="50" height="50">
+											<img src="{{Student.avatarPath}}" alt="" width="50" height="50">
 										</div>
 										<div class="media-body">
-											<h4>{{User.fullname}}</h4>
+											<h4>{{Student.fullname}}</h4>
 											<h5>{{createdAt}}</h5>
-											<a class="reply_btn" onclick="showReply({{../id}}, '{{User.fullname}}')">Reply</a>
+											<a class="reply_btn" onclick="showReply({{../id}}, '{{Student.fullname}}')">Reply</a>
 										</div>
 									</div>
 									<p>{{message}}</p>
@@ -121,7 +122,7 @@
   											<span aria-hidden="true">&times; &nbsp;</span>
 										</button>
 										<label for="" id="reply"></label>
-										<input type="hidden" class="form-control" name="productId" id="productId" value="{{id}}">
+										<input type="hidden" class="form-control" name="bookId" id="bookId" value="{{id}}">
 										<input type="hidden" name="parentCommentId" id="parentCommentId" value="">
 									</div>
 									</div>
@@ -135,7 +136,7 @@
 									</div>
 								</form>
 								{{else}}
-								<h4>Please login to comment! <a href="/users/login?returnURL=/products/{{id}}">Click here to login</a></h4>
+								<h4>Please login to comment! <a href="/students/login?returnURL=/book/{{id}}">Click here to login</a></h4>
 								{{/if}}
 							</div>
 						</div>
@@ -164,10 +165,10 @@
 								<div class="review_item">
 									<div class="media">
 										<div class="d-flex">
-											<img src="{{User.avatarPath}}" alt="" width="50" height="50">
+											<img src="{{Student.avatarPath}}" alt="" width="50" height="50">
 										</div>
 										<div class="media-body">
-											<h4>{{User.fullname}}</h4>
+											<h4>{{Student.fullname}}</h4>
 											{{{createStars rating}}}
 										</div>
 									</div>
@@ -192,18 +193,18 @@
 								<p id="starName">Outstanding</p>
                 <form action="/reviews" method="POST" class="form-contact form-review mt-3">
                   <div class="form-group">
-					  	<input type="hidden" name="productId" value="{{id}}">
-						<input type="hidden" name="rating" id="rating" value="{{../userReview.rating}}">
+					  	<input type="hidden" name="bookId" value="{{id}}">
+						<input type="hidden" name="rating" id="rating" value="{{../studentReview.rating}}">
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control different-control w-100" name="message" cols="30" rows="5" placeholder="Enter Message">{{../userReview.message}}</textarea>
+                    <textarea class="form-control different-control w-100" name="message" cols="30" rows="5" placeholder="Enter Message">{{../studentReview.message}}</textarea>
                   </div>
                   <div class="form-group text-center text-md-right mt-3">
                     <button type="submit" class="button button--active button-review">Submit Now</button>
                   </div>
                 </form>
 				{{else}}
-								<h4>Please login to review! <a href="/users/login?returnURL=/products/{{id}}">Click here to login</a></h4>
+								<h4>Please login to review! <a href="/students/login?returnURL=/book/{{id}}">Click here to login</a></h4>
 								{{/if}}
 							</div>
 						</div>
@@ -266,7 +267,7 @@
 			for(i=rating; i<5; i++){
 				$(stars[i]).addClass('disabled');
 			}
-			let starNames = ['Please rating this product!','Worst','Bad','Ok', 'Good', 'Outstanding'];
+			let starNames = ['Please rating this Book!','Worst','Bad','Ok', 'Good', 'Outstanding'];
 			$('#starName').html(starNames[rating]);
 		}
 

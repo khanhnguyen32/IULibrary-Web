@@ -10,14 +10,14 @@
 						<div class="hover">
 							<h4>Already have an account?</h4>
 							<p>Leading in Fashion. We are Lazy</p>
-							<a class="button button-account" href="/users/login">Login Now</a>
+							<a class="button button-account" href="/students/login">Login Now</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6">
 					<div class="login_form_inner register_form_inner">
 						<h3>Create an account</h3>
-						<form class="row login_form" action="/users/register" id="register_form" method="POST">
+						<form class="row login_form" action="/students/register" id="register_form" method="POST">
 						{{#if message}}
 						<div class="col-md-12 form-group alert {{type}}">
 						<strong>{{message}}</strong>
@@ -27,7 +27,7 @@
 								<input type="text" class="form-control" id="fullname" name="fullname" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="email" class="form-control" id="username" name="username" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
+								<input type="text" class="form-control" id="studentID" name="studentID" placeholder="Student ID" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Student ID'">
               </div>
               <div class="col-md-12 form-group">
 								<input type="password" class="form-control" id="password" name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
