@@ -1,26 +1,36 @@
 {
-  "development": {
-    "username": "postgres",
-    "password": "postgres",
-    "database": "IUlibrarydb",
-    "host": "localhost",
-    "dialect": "postgres",
-    "operatorAliases": false
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorAliases": false
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorAliases": false
-  }
+    "development": {
+        "username": "bvlegyrjredtvs",
+        "password": "3b2b8125f8027ece1b862519b2a580bd38fffe40478fa7d19bcdd1ed475dd2cf",
+        "database": "ddhaoml4n22d1u",
+        "host": "ec2-54-90-211-192.compute-1.amazonaws.com",
+        "dialect": "postgres",
+        "dialectOptions": {
+            "ssl": {
+                "require": true,
+                "rejectUnauthorized": false
+            }
+        }
+    },
+    "test": {
+        "username": "postgres",
+        "password": "postgres",
+        "database": "IUlibrarydb",
+        "host": "localhost",
+        "dialect": "postgres",
+        "operatorAliases": false
+    },
+    "production": {
+        "username": "bvlegyrjredtvs",
+        "password": "3b2b8125f8027ece1b862519b2a580bd38fffe40478fa7d19bcdd1ed475dd2cf",
+        "database": "ddhaoml4n22d1u",
+        "host": "ec2-54-90-211-192.compute-1.amazonaws.com",
+        "dialect": "postgres",
+        "dialectOptions": {
+            "ssl": {
+                "require": true,
+                "rejectUnauthorized": false
+            }
+        }
+    }
 }
