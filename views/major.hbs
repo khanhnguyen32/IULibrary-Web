@@ -59,7 +59,6 @@
           <div class="sorting">
             <select id="sort" onchange="selectParam('sort', this.value)">
               <option value="name">Default sorting by name</option>
-              <option value="price">Sorting by price low to high</option>
               <option value="overallReview">Sorting by reviews from high to low</option>
             </select>
           </div>
@@ -71,18 +70,19 @@
             </select>
           </div>
           <div>
-            <form action="/book" method="GET"></form>
+            <form action="/book" method="GET">
             <div class="input-group filter-bar-search">
               
                 <input type="text" name="search" placeholder="Search">
                 <div class="input-group-append">
                   <button type="submit"><i class="ti-search"></i></button>
                 </div>
-            
+             
             </div>
             </form>
-          </div>
-        </div>
+           </div>
+           </div>
+           
         <!-- End Filter Bar -->
         <!-- Start Best Seller -->
         <section class="lattest-product-area pb-40 category-list">
@@ -252,9 +252,9 @@
 <script>
   let urlParams = new URLSearchParams(location.search);
   let params = {
+    major: 0,
+    publisher: 0,
     category: 0,
-    brand: 0,
-    color: 0,
     min: 0,
     max: 100000000,
     limit: 9,
@@ -263,6 +263,7 @@
     search: ''
   };
 
+//Create all param for urlParam
   for (let key in params) {
     if (!urlParams.has(key)) {
       urlParams.append(key, params[key]);
