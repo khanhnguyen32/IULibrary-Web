@@ -26,7 +26,7 @@
                                           <img src="{{item.thumbnailPath}}" alt="" height="85" width="55">
                                       </div>
                                       <div class="media-body">
-                                          <p>{{item.name}}</p>
+                                          <h4>{{item.name}}</h4>
                                       </div>
                                   </div>
                               </td>
@@ -48,19 +48,7 @@
                               <td>
                                   <a class="button bg-danger text-white" href="#" onclick="clearCart()">Clear List</a>
                               </td>
-                              <td>
-
-                              </td>
-                              <td>
-
-                              </td>
-                              <td>
-                                  {{!-- <div class="cupon_text d-flex align-items-center">
-                                      <input type="text" placeholder="Coupon Code">
-                                      <a class="primary-btn" href="#">Apply</a>
-                                      <a class="button" href="#">Have a Coupon?</a>
-                                  </div> --}}
-                              </td>
+                              
                           </tr>
                           
                           <tr class="shipping_area">
@@ -75,23 +63,22 @@
                               </td>
                               <td>
                                   <div class="shipping_box">
-                                      <ul class="list">
-                                          
-                                          {{!-- <li><a >Local Delivery: 100 000 VNĐ</a></li> --}}
-                                          <li class="active"><a>Shipping</a></li>
-                                      </ul>
-                                      {{!-- <h6>Calculate Shipping <i class="fa fa-caret-down" aria-hidden="true"></i></h6> --}}
                                       <input type="text" placeholder="Name">
-                                      <input type="email" placeholder="Email">
-                                      <select class="shipping_select">
-                                          <option value="1">Ho Chi Minh City</option>
-                                          <option value="2">Quang Binh</option>
-                                          <option value="4">Quang Tri</option>
-                                      </select>
+                                      <input type="text" placeholder="Phone number">
                                       
-                                      <input type="text" placeholder="Address">
-                                      <input type="text" placeholder="Banking Account">
-                                      <input type="password" placeholder="OTP Code">
+                                      <select class="shipping_select" id="fee" onchange="styleselect()">
+                                          <option value="1">District 1</option>
+                                          <option value="2">District 2</option>
+                                          <option value="3">District 3</option>
+                                          <option value="4">Thu Duc district</option>
+                                          <option value="9">District 9</option>
+                                          <option value="7">District 7</option>
+                                      </select>
+                                     
+                                      <input type="text" placeholder="Address (eg. 12 Dong Khoi Street)">
+                                      <p id="shipping">Shipping Fee</p>
+                                      {{!-- <input type="text" placeholder="Banking Account">
+                                      <input type="password" placeholder="OTP Code"> --}}
                                       {{!-- <a class="gray_btn" href="/cart">Update Details</a> --}}
                                   </div>
                               </td>
@@ -108,8 +95,8 @@
                               </td>
                               <td>
                                   <div class="checkout_btn_inner d-flex align-items-center">
-                                      <a class="gray_btn" href="/book">Continue Borrowing</a>
-                                      <a class="primary-btn ml-2" href="/confirmation" onclick="clearCart2()">Borrow</a>
+                                      <a class="gray_btn" href="/book">Continue Searching Book</a>
+                                      <a class="primary-btn ml-2" href="/confirmation" onclick="clearCart()">Borrow</a>
                                   </div>
                               </td>
                           </tr>
@@ -124,3 +111,27 @@
   </section>
   {{/with}}
   <!--================End Cart Area =================-->
+<script>
+    function styleselect(){
+        var value = $('#fee').val();
+        var div = $("#shipping");
+        if (value == "9") {
+             div.html('<b>Shipping fee: 10 000 VNĐ</b>');
+        }
+        if (value == "7") {
+             div.html('<b>Shipping fee: 50 000 VNĐ</b>');
+        }
+        if (value == "4") {
+             div.html('<b>Shipping fee: 10 000 VNĐ</b>');
+        }
+        if (value == "3") {
+             div.html('<b>Shipping fee: 10 000 VNĐ</b>');
+        }
+         if (value == "2") {
+            div.html('<b>Shipping fee: 20 000 VNĐ</b>');
+        }
+        if (value == "1") {
+         div.html('<b>Shipping fee: 30 000 VNĐ</b>');
+        }
+    }
+</script>

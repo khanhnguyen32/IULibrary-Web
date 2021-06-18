@@ -69,7 +69,6 @@ module.exports = function Cart(oldCart) {
         var cart = {
             items: this.generateArray(),
             totalQuantity: this.totalQuantity,
-
             address: this.address,
             paymentMethod: this.paymentMethod
         };
