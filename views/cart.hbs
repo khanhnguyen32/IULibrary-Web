@@ -12,9 +12,9 @@
                       <thead>
                           <tr>
                               <th scope="col">Book</th>
-                              
+                              <th></th>
+                              <th></th>
                               <th scope="col">Quantity</th>
-                              
                           </tr>
                       </thead>
                       <tbody>
@@ -30,7 +30,8 @@
                                       </div>
                                   </div>
                               </td>
-                             
+                            <td></td>
+                             <td></td>
                               <td>
                                   <div class="product_count">
                                       <input type="text" name="qty" id="sst{{item.id}}" maxlength="12" value="{{quantity}}" title="Quantity:"
@@ -48,21 +49,49 @@
                               <td>
                                   <a class="button bg-danger text-white" href="#" onclick="clearCart()">Clear List</a>
                               </td>
+                              <td>
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                  {{!-- <div class="cupon_text d-flex align-items-center">
+                                      <input type="text" placeholder="Coupon Code">
+                                      <a class="primary-btn" href="#">Apply</a>
+                                      <a class="button" href="#">Have a Coupon?</a>
+                                  </div> --}}
+                              </td>
                               
                           </tr>
-                          
+                          <tr>
+                              <td>
+
+                              </td>
+                              <td>
+
+                              </td>
+                              <td>
+                                 
+                              </td>
+                              <td>
+                                  <h5>Shipping detail</h5>
+                              </td>
+                          </tr>
                           <tr class="shipping_area">
                               <td class="d-none d-md-block">
 
                               </td>
-                              <td>
+                               <td>
 
                               </td>
                               <td>
-                                  <h5></h5>
+                                  
                               </td>
                               <td>
+                                  
                                   <div class="shipping_box">
+                                      
                                       <input type="text" placeholder="Name">
                                       <input type="text" placeholder="Phone number">
                                       

@@ -12,7 +12,7 @@ controller.getTrendingProducts = () => {
                     ['overallReview', 'DESC']
                 ],
                 limit: 8,
-                include: [{ model: models.Major }, { model: models.Publisher }],
+                include: [{ model: models.Major }, { model: models.Publisher }, { model: models.Category }],
                 attributes: ['id', 'name', 'imagePath', 'availableQuantity']
             })
             .then(data => resolve(data))
